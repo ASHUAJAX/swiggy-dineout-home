@@ -1,13 +1,12 @@
-import './App.css'
+import "./App.scss";
+import AppRoutes from "./routes/Index";
 
 function App() {
-
-
   return (
     <>
-      Ashu
+      <AppRoutes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,14 @@
+@import "../../../assets//styles/scss/mixins.scss";
+@import "../../../assets//styles/scss/varible.scss";
+
+.swiggyButton {
+  @include flex-center;
+  background-color: $primary-color;
+  box-shadow: 0 2px 5px 0 rgba(255, 88, 84, 0.3);
+  font-weight: bold;
+  padding: 0.35rem 3.5rem;
+  color: #fff;
+  height: 2.2rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
