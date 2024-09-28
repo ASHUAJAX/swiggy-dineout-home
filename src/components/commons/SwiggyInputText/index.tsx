@@ -11,7 +11,7 @@ interface SwiggyInputTextProps {
 function SwiggyInputText({ data, setData }: SwiggyInputTextProps) {
     const onChangeFunc = (ev: any): void => {
         const { value } = ev.target;
-        setData((prev) => ({ ...prev, value }));
+        setData((prev:any) => ({ ...prev, value }));
     }
     return (
         <>

@@ -17,14 +17,14 @@ function Navbar() {
 
 
 
-  const [locationData, seLocationData] = useState({
-    selectedLoc: "",
-    popularLocs: [
-      "Rajouri Garden, West Delhi",
-      "Sector 29, Gurgaon",
-      "DLF Cyber City, Gurgaon",
-    ],
-  });
+  // const [locationData, seLocationData] = useState({
+  //   selectedLoc: "",
+  //   popularLocs: [
+  //     "Rajouri Garden, West Delhi",
+  //     "Sector 29, Gurgaon",
+  //     "DLF Cyber City, Gurgaon",
+  //   ],
+  // });
 
   return (
     <div className="navbarContainer">
