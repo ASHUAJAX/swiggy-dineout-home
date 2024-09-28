@@ -1,0 +1,194 @@
+{
+  "availableIn": [
+    {
+      "name": "Delhi",
+      "url": "/delhi"
+    },
+    {
+      "name": "Mumbai",
+      "url": "/mumbai"
+    },
+    {
+      "name": "Bangalore",
+      "url": "/bangalore"
+    },
+    {
+      "name": "Chennai",
+      "url": "/chennai"
+    },
+    {
+      "name": "Hyderabad",
+      "url": "/hyderabad"
+    },
+    {
+      "name": "Pune",
+      "url": "/pune"
+    },
+    {
+      "name": "Kolkata",
+      "url": "/kolkata"
+    },
+    {
+      "name": "Ahmedabad",
+      "url": "/ahmedabad"
+    },
+    {
+      "name": "Chandigarh",
+      "url": "/chandigarh"
+    },
+    {
+      "name": "Goa",
+      "url": "/goa"
+    },
+    {
+      "name": "Jaipur",
+      "url": "/jaipur"
+    },
+    {
+      "name": "Lucknow",
+      "url": "/lucknow"
+    },
+    {
+      "name": "Indore",
+      "url": "/indore"
+    },
+    {
+      "name": "Udaipur",
+      "url": "/udaipur"
+    },
+    {
+      "name": "Agra",
+      "url": "/agra"
+    },
+    {
+      "name": "Vadodara",
+      "url": "/vadodara"
+    },
+    {
+      "name": "Nagpur",
+      "url": "/nagpur"
+    },
+    {
+      "name": "Kochi",
+      "url": "/kochi"
+    },
+    {
+      "name": "Surat",
+      "url": "/surat"
+    },
+    {
+      "name": "Ludhiana",
+      "url": "/ludhiana"
+    }
+  ],
+
+  "sections": [
+    {
+      "title": "Discover",
+      "items": [
+        {
+          "name": "Trending Restaurants",
+          "url": "/delhi-restaurants"
+        }
+      ]
+    },
+    {
+      "title": "About",
+      "items": [
+        {
+          "name": "About Us",
+          "url": "/aboutus"
+        },
+        {
+          "name": "Blog",
+          "url": "https://www.dineout.co.in/blog",
+          "target": "_blank",
+          "rel": "noopener"
+        },
+        {
+          "name": "Terms & Conditions",
+          "url": "/termsandconditions"
+        },
+        {
+          "name": "Privacy Policy",
+          "url": "/privacy-policy"
+        }
+      ]
+    },
+    {
+      "title": "Top Cuisines",
+      "items": [
+        {
+          "name": "Chinese",
+          "url": "/delhi-restaurants/chinese-cuisine"
+        },
+        {
+          "name": "Italian",
+          "url": "/delhi-restaurants/italian-cuisine"
+        },
+        {
+          "name": "South Indian",
+          "url": "/delhi-restaurants/south-indian-cuisine"
+        },
+        {
+          "name": "Mexican",
+          "url": "/delhi-restaurants/mexican-cuisine"
+        },
+        {
+          "name": "Bengali",
+          "url": "/delhi-restaurants/bengali-cuisine"
+        },
+        {
+          "name": "Thai",
+          "url": "/delhi-restaurants/thai-cuisine"
+        }
+      ]
+    },
+    {
+      "title": "Top Facilities",
+      "items": [
+        {
+          "name": "Fine Dining",
+          "url": "/delhi-restaurants/fine-dining"
+        },
+        {
+          "name": "5 Star",
+          "url": "/delhi-restaurants/5-star"
+        },
+        {
+          "name": "Rooftop",
+          "url": "/delhi-restaurants/roof-top-feature"
+        }
+      ]
+    },
+    {
+      "title": "Top Locations",
+      "items": [
+        {
+          "name": "Rajouri Garden",
+          "url": "/delhi-restaurants/west-delhi/rajouri-garden"
+        },
+        {
+          "name": "Hauz Khas Village",
+          "url": "/delhi-restaurants/south-delhi/hauz-khas-village"
+        },
+        {
+          "name": "DLF Cyber City",
+          "url": "/delhi-restaurants/gurgaon/dlf-cyber-city"
+        },
+        {
+          "name": "Connaught Place",
+          "url": "/delhi-restaurants/central-delhi/connaught-place"
+        },
+        {
+          "name": "Khan Market",
+          "url": "/delhi-restaurants/central-delhi/khan-market"
+        },
+        {
+          "name": "Dwarka",
+          "url": "/delhi-restaurants/west-delhi/dwarka"
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,14 @@
 [
   {
-    "navItemName": "home"
+    "navItemName": "home",
+    "path": "/"
   },
   {
-    "navItemName": "book a table"
+    "navItemName": "book a table",
+    "path": "/book-a-table"
   },
   {
-    "navItemName": "blog"
+    "navItemName": "blog",
+    "path": "/blog"
   }
 ]

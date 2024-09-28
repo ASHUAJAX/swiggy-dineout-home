@@ -1,5 +1,5 @@
 @import "../../../assets//styles/scss/mixins.scss";
-@import "../../../assets//styles/scss/varible.scss";
+@import "../../../assets//styles/scss/variables.scss";
 
 .swiggyButton {
   @include flex-center;
@@ -8,7 +8,9 @@
   font-weight: bold;
   padding: 0.35rem 3.5rem;
   color: #fff;
-  height: 2.2rem;
+  height: 2rem;
   border-radius: 5px;
+  border: none;
+  width: 108px;
   text-transform: capitalize;
 }

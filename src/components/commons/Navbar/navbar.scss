@@ -1,9 +1,67 @@
-@import '../../../assets/styles/scss/varible.scss';
-.navbarContainer{
+@import "../../../assets/styles/scss/variables.scss";
+@import "../../../assets/styles/scss/mixins.scss";
+.navbarContainer {
+  width: 100%;
+  height: max-content;
+  padding-bottom: 10px;
+  &__varientTop {
+    @include flex-center;
     width: 100%;
-    &__varientTop{
-        width: 100%;
-        height: 50px;
-        background-color: $primary-color;
+    height: 50px;
+    margin-top: 0.5rem;
+    &_nav {
+      flex: 2;
+      &_active {
+        color: $primary-color !important;
+        font-weight: bold;
+        border-top: 4px solid $primary-color;
+        margin-top: -27px !important;
+        padding-top: 20px !important;
+      }
+      ul {
+        @include flex-center;
+        gap: 5rem;
+        font-size: 0.875rem;
+        text-transform: capitalize;
+        li {
+         
+          margin-top: -20px;
+          padding-top: 20px;
+
+          &:hover {
+            color: $primary-color !important;
+            border-top: 4px solid $primary-color;
+            margin-top: -27px !important;
+            padding-top: 20px !important;
+            cursor: pointer;
+          }
+        }
+      }
     }
+    &_child {
+      flex: 1;
+      @include flex-center;
+
+      &_logo {
+        width: 125px;
+        margin-left: 77px;
+      }
+      &_location {
+        @include flex-center;
+        color: #666;
+        border: 1px solid $input-border-color;
+        border-radius: 4px;
+        margin-left: 2rem;
+        padding: 0.4rem 1rem;
+        height: 1rem;
+        width: 170px;
+        &_locationIcon {
+          font-size: 1.2rem !important;
+        }
+        input {
+          width: 140px;
+        }
+      }
+    }
+  }
 }

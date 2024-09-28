@@ -1,5 +1,26 @@
-body{
+@import "./assets/styles/scss/variables.scss";
+body {
   margin: 0;
   padding: 0;
-  font-family: "Metropolis", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-stretch: ultra-expanded !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  border: 0px;
+  font-size: 0.9rem;
+  color: #7f6d66;
+}
+input:focus {
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2c2c2c;
 }

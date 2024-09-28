@@ -1,0 +1,27 @@
+@import "../../../assets/styles/scss/variables.scss";
+.BestOffers {
+  width: 100%;
+  background-color: $whiteDusky;
+  padding: 20px 0px 40px 0px;
+  &_container {
+    margin: auto;
+    width: 88%;
+    h1 {
+      color: $txt-varient;
+      font-size: 1.4rem;
+    }
+    &_offers {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      &_card {
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.25);
+        &_img {
+          width: 124px;
+        }
+      }
+    }
+  }
+}
