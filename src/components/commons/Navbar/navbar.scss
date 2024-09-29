@@ -4,11 +4,17 @@
   width: 100%;
   height: max-content;
   padding-bottom: 10px;
-  &__varientTop {
+  background-color: $white;
+
+  &__varientTop,
+  &__varientSticky,
+  &__varientMobile {
     @include flex-center;
-    width: 100%;
+    width: 88%;
+    margin: auto;
     height: 50px;
     margin-top: 0.5rem;
+    gap: 0px;
     &_nav {
       flex: 2;
       &_active {
@@ -23,16 +29,17 @@
         gap: 5rem;
         font-size: 0.875rem;
         text-transform: capitalize;
+        padding: 0px;
+        margin: 0px;
         li {
-         
           margin-top: -20px;
           padding-top: 20px;
 
           &:hover {
             color: $primary-color !important;
             border-top: 4px solid $primary-color;
-            margin-top: -27px !important;
-            padding-top: 20px !important;
+            margin-top: -27px;
+            padding-top: 20px;
             cursor: pointer;
           }
         }
@@ -40,18 +47,18 @@
     }
     &_child {
       flex: 1;
-      @include flex-center;
 
+      @include flex-center;
+      gap: 20px;
       &_logo {
         width: 125px;
-        margin-left: 77px;
       }
       &_location {
         @include flex-center;
         color: #666;
         border: 1px solid $input-border-color;
         border-radius: 4px;
-        margin-left: 2rem;
+
         padding: 0.4rem 1rem;
         height: 1rem;
         width: 170px;
@@ -60,6 +67,144 @@
         }
         input {
           width: 140px;
+        }
+      }
+    }
+    &_search {
+      flex: 2;
+      text-align: center;
+      &_searchBar {
+        margin: auto;
+        height: 30px !important;
+        border: 1px solid $input-border-color;
+        width: 95% !important;
+        padding: 0 !important;
+        margin-top: 0px !important;
+        input {
+          font-size: 0.9rem !important;
+        }
+        svg {
+          width: 20px;
+          margin-left: 0.5rem;
+        }
+        button {
+          box-shadow: none;
+        }
+      }
+    }
+    &_menu {
+      background-color: #c1bfbf;
+      color: white;
+      height: 29px;
+      width: 29px;
+      border-radius: 100px;
+      @include flex-center;
+      margin-left: 10px;
+      svg {
+        width: 20px;
+      }
+    }
+  }
+  .stickyNavbarContainer {
+    width: 100%;
+    background-color: $white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: auto;
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.4);
+    padding-bottom: 10px;
+    animation: showNavabarAni 0.4s;
+    z-index: 9;
+  }
+  &__varientSticky {
+    padding-bottom: 5px;
+    &_nav {
+      margin-bottom: 10px;
+      &_active {
+        margin: 0px !important;
+      }
+      ul {
+        gap: 8rem !important;
+
+        li {
+          border-top: 0px;
+          margin: 0px;
+          &:hover {
+            border-top: 0px !important;
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes showNavabarAni {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.varientMobileContainer {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: $white;
+  z-index: 9;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.4);
+}
+@media (min-width: 0px) and (max-width: 1024px) {
+  .varientMobileContainer {
+    display: block;
+  }
+  .navbarContainer__varientMobile {
+    button {
+      padding: 0 !important;
+      width: 40px;
+      height: 25px;
+      font-size: 0.6rem;
+    }
+  }
+  .navbarContainer {
+    &__varientTop,
+    &__varientSticky {
+      display: none;
+    }
+    &__varientMobile {
+      &_child {
+        justify-content: flex-start;
+        &_logo {
+          width: 60px;
+        }
+      }
+    }
+  }
+  .stickyNavbarContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 420px) {
+  .navbarContainer {
+   
+    &__varientMobile {
+      &_child {
+        justify-content: flex-start;
+        
+        &_logo {
+          width: 60px;
+        }
+        &_location{
+          width: max-content;
+          margin-right: 10px;
         }
       }
     }

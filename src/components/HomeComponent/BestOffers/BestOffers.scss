@@ -2,7 +2,7 @@
 .BestOffers {
   width: 100%;
   background-color: $whiteDusky;
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0px 50px 0px;
   &_container {
     margin: auto;
     width: 88%;
@@ -23,5 +23,11 @@
         }
       }
     }
+  }
+}
+
+@media (min-width:0px) and (max-width:650px){
+  .BestOffers_container_offers{
+    flex-wrap: wrap;
   }
 }

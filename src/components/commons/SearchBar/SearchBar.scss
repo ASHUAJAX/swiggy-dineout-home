@@ -1,0 +1,22 @@
+@import "../../../assets/styles/scss/variables.scss";
+.SearchBar {
+    display: flex;
+    margin-top: -10px;
+    align-items: center;
+    width: 85%;
+    background-color: $white;
+    box-shadow: 2px 4px 5px 0 rgba(204, 199, 198, 0.4);
+    border-radius: 5px;
+    padding: 0 1rem 0 1.5rem;
+    height: 60px;
+    position: relative;
+    &_icon {
+        color: $primary-color;
+        font-size: 30px!important;
+    }
+    input {
+      font-size: 1.1rem;
+      width: 100%;
+      margin-left: 15px;
+    }
+  }

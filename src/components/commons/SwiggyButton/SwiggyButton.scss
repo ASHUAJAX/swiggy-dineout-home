@@ -13,4 +13,9 @@
   border: none;
   width: 108px;
   text-transform: capitalize;
+  transition: 0.2s;
+  &:hover{
+    background-color: $button-hover-color;
+    cursor: pointer;
+  }
 }
