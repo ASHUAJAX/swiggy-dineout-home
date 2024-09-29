@@ -185,7 +185,7 @@
     &_header {
       display: flex;
       align-items: center;
-padding: 20px;
+      padding: 20px;
       &_logo {
         width: 100px;
       }
@@ -195,7 +195,6 @@ padding: 20px;
         color: $primary-color;
         cursor: pointer;
         text-align: right;
-        
       }
     }
 
@@ -210,6 +209,7 @@ padding: 20px;
       flex-direction: column;
       padding: 0px;
       padding-top: 20px;
+      width: max-content;
 
       li {
         border: 0px;

@@ -10,8 +10,20 @@ import SwiggyButton from "../SwiggyButton";
 import SwiggyInputText from "../SwiggyInputText";
 import "./navbar.scss";
 import navdata from "./navdata.json";
+import getGeoLocationHook from "../../hooks/getGeoLocation";
 function Navbar() {
   const webLocation = useLocation();
+  // const [locationData, seLocationData] = useState({
+  //   selectedLoc: null,
+  //   latitude: null, longitude: null,
+  //   city: "",
+  //   popularLocs: [
+  //     "Rajouri Garden, West Delhi",
+  //     "Sector 29, Gurgaon",
+  //     "DLF Cyber City, Gurgaon",
+  //   ],
+  // });
+  // const [error, setError] = useState(null);
   const [data, setData] = useState({
     name: "location",
     placeholder: "Please type a location",
@@ -25,14 +37,7 @@ function Navbar() {
   const [isStickyNavbar, setIsStickyNavbar] = useState(false);
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
 
-  // const [locationData, seLocationData] = useState({
-  //   selectedLoc: "",
-  //   popularLocs: [
-  //     "Rajouri Garden, West Delhi",
-  //     "Sector 29, Gurgaon",
-  //     "DLF Cyber City, Gurgaon",
-  //   ],
-  // });
+
 
   const getScrollFunc = (): void => {
     if (window.scrollY > 370) {
@@ -48,13 +53,16 @@ function Navbar() {
 
   useEffect(() => {
 
+   
     window.addEventListener("scroll", getScrollFunc);
 
     return () => {
       window.removeEventListener("scroll", getScrollFunc);
     }
 
-  }, [])
+  }, []);
+
+
 
   return (
     <div className="navbarContainer">
