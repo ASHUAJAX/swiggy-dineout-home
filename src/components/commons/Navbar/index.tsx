@@ -1,7 +1,7 @@
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import MenuIcon from '@mui/icons-material/Menu';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
@@ -10,7 +10,6 @@ import SwiggyButton from "../SwiggyButton";
 import SwiggyInputText from "../SwiggyInputText";
 import "./navbar.scss";
 import navdata from "./navdata.json";
-import getGeoLocationHook from "../../hooks/getGeoLocation";
 function Navbar() {
   const webLocation = useLocation();
   // const [locationData, seLocationData] = useState({
