@@ -1,15 +1,14 @@
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
-import logo from "../../../assets/images/logo.png";
-import navdata from "./navdata.json";
-import "./navbar.scss";
-import SwiggyButton from "../SwiggyButton";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import MenuIcon from '@mui/icons-material/Menu';
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import SwiggyInputText from "../SwiggyInputText";
+import logo from "../../../assets/images/logo.png";
 import SearchBar from "../SearchBar";
-import PersonIcon from '@mui/icons-material/Person';
-import MenuIcon from '@mui/icons-material/Menu';
+import SwiggyButton from "../SwiggyButton";
+import SwiggyInputText from "../SwiggyInputText";
+import "./navbar.scss";
+import navdata from "./navdata.json";
 function Navbar() {
   const webLocation = useLocation();
   const [data, setData] = useState({
