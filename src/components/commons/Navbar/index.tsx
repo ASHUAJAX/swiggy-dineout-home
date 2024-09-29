@@ -1,6 +1,7 @@
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import MenuIcon from '@mui/icons-material/Menu';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
@@ -22,6 +23,7 @@ function Navbar() {
     value: "",
   });
   const [isStickyNavbar, setIsStickyNavbar] = useState(false);
+  const [isMobileNavActive, setIsMobileNavActive] = useState(false);
 
   // const [locationData, seLocationData] = useState({
   //   selectedLoc: "",
@@ -38,6 +40,10 @@ function Navbar() {
     } else {
       setIsStickyNavbar(false);
     }
+  }
+
+  const mobileNavActiveToggler = () => {
+    setIsMobileNavActive((prev: boolean) => !prev);
   }
 
   useEffect(() => {
@@ -67,7 +73,7 @@ function Navbar() {
           </div>
         </div>
 
-{/* navbar desktop */}
+        {/* navbar desktop */}
         <nav className="navbarContainer__varientTop_nav">
           <ul>
             {navdata.map((elm, index) => {
@@ -89,7 +95,7 @@ function Navbar() {
         </div>
       </div>
 
-{/* sticky navbar desktop */}
+      {/* sticky navbar desktop */}
       {
         isStickyNavbar && <div className="stickyNavbarContainer">
           <div className="navbarContainer__varientSticky">
@@ -152,9 +158,41 @@ function Navbar() {
             </div>
           </div>
           <SwiggyButton txt={"login"} />
-          <div className="navbarContainer__varientMobile_menu">
+          <div className="navbarContainer__varientMobile_menu" onClick={mobileNavActiveToggler}>
             <MenuIcon />
           </div>
+        </div>
+
+        {/* mobile menu  */}
+        <div className={`mobileMenu_wrapper ${isMobileNavActive && 'mobileMenu_active'}`}>
+          <nav className="mobileMenu_wrapper_nav">
+            <div className="mobileMenu_wrapper_nav_header">
+              <img
+                className="mobileMenu_wrapper_nav_header_logo"
+                src={logo}
+                alt="swiggy-logo"
+              />
+              <div className="mobileMenu_wrapper_nav_header_icon" onClick={mobileNavActiveToggler}>
+                <ArrowBackIcon />
+              </div>
+            </div>
+
+
+            <ul>
+              {navdata.map((elm, index) => {
+                return (
+                  <li
+                    key={index}
+                    className={`${elm.path === webLocation.pathname &&
+                      "mobileMenu_wrapper_nav_active"
+                      }`}
+                  >
+                    {elm.navItemName}
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 @import "../../../assets/styles/scss/variables.scss";
 @import "../../../assets/styles/scss/mixins.scss";
+
 .navbarContainer {
   width: 100%;
   height: max-content;
@@ -15,8 +16,10 @@
     height: 50px;
     margin-top: 0.5rem;
     gap: 0px;
+
     &_nav {
       flex: 2;
+
       &_active {
         color: $primary-color !important;
         font-weight: bold;
@@ -24,6 +27,7 @@
         margin-top: -27px !important;
         padding-top: 20px !important;
       }
+
       ul {
         @include flex-center;
         gap: 5rem;
@@ -31,6 +35,7 @@
         text-transform: capitalize;
         padding: 0px;
         margin: 0px;
+
         li {
           margin-top: -20px;
           padding-top: 20px;
@@ -45,14 +50,17 @@
         }
       }
     }
+
     &_child {
       flex: 1;
 
       @include flex-center;
       gap: 20px;
+
       &_logo {
         width: 125px;
       }
+
       &_location {
         @include flex-center;
         color: #666;
@@ -62,17 +70,21 @@
         padding: 0.4rem 1rem;
         height: 1rem;
         width: 170px;
+
         &_locationIcon {
           font-size: 1.2rem !important;
         }
+
         input {
           width: 140px;
         }
       }
     }
+
     &_search {
       flex: 2;
       text-align: center;
+
       &_searchBar {
         margin: auto;
         height: 30px !important;
@@ -80,31 +92,38 @@
         width: 95% !important;
         padding: 0 !important;
         margin-top: 0px !important;
+
         input {
           font-size: 0.9rem !important;
         }
+
         svg {
           width: 20px;
           margin-left: 0.5rem;
         }
+
         button {
           box-shadow: none;
         }
       }
     }
+
     &_menu {
-      background-color: #c1bfbf;
+      background-color: #898787;
       color: white;
       height: 29px;
       width: 29px;
       border-radius: 100px;
       @include flex-center;
       margin-left: 10px;
+      cursor: pointer;
+
       svg {
         width: 20px;
       }
     }
   }
+
   .stickyNavbarContainer {
     width: 100%;
     background-color: $white;
@@ -117,19 +136,24 @@
     animation: showNavabarAni 0.4s;
     z-index: 9;
   }
+
   &__varientSticky {
     padding-bottom: 5px;
+
     &_nav {
       margin-bottom: 10px;
+
       &_active {
         margin: 0px !important;
       }
+
       ul {
         gap: 8rem !important;
 
         li {
           border-top: 0px;
           margin: 0px;
+
           &:hover {
             border-top: 0px !important;
             margin: 0px;
@@ -140,16 +164,75 @@
   }
 }
 
+.mobileMenu_active {
+  width: 100% !important;
+}
+
+.mobileMenu_wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  background-color: rgba(0, 0, 0, 0.555);
+  transition: 0.4s;
+  overflow: hidden;
+
+  &_nav {
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+
+    &_header {
+      display: flex;
+      align-items: center;
+padding: 20px;
+      &_logo {
+        width: 100px;
+      }
+
+      &_icon {
+        flex: 1;
+        color: $primary-color;
+        cursor: pointer;
+        text-align: right;
+        
+      }
+    }
+
+    &_active {
+      font-weight: bold;
+      color: $primary-color;
+    }
+
+    ul {
+      display: flex;
+      margin-left: 10px;
+      flex-direction: column;
+      padding: 0px;
+      padding-top: 20px;
+
+      li {
+        border: 0px;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+    }
+  }
+}
+
 @keyframes showNavabarAni {
   0% {
     opacity: 0;
     transform: translateY(-100%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 .varientMobileContainer {
   display: none;
   position: fixed;
@@ -161,10 +244,12 @@
   z-index: 9;
   box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.4);
 }
+
 @media (min-width: 0px) and (max-width: 1024px) {
   .varientMobileContainer {
     display: block;
   }
+
   .navbarContainer__varientMobile {
     button {
       padding: 0 !important;
@@ -173,38 +258,51 @@
       font-size: 0.6rem;
     }
   }
+
   .navbarContainer {
     &__varientTop,
     &__varientSticky {
       display: none;
     }
+
     &__varientMobile {
       &_child {
         justify-content: flex-start;
+
         &_logo {
           width: 60px;
         }
       }
     }
   }
+
   .stickyNavbarContainer {
     display: none;
   }
 }
 
-@media (min-width: 0px) and (max-width: 420px) {
+@media (min-width: 0px) and (max-width: 440px) {
   .navbarContainer {
-   
     &__varientMobile {
+      width: 95%;
+
       &_child {
         justify-content: flex-start;
-        
+        gap: 5px;
+
         &_logo {
           width: 60px;
         }
-        &_location{
+
+        &_location {
           width: max-content;
           margin-right: 10px;
+          width: 100%;
+
+          input {
+            font-size: 0.6rem;
+            width: 100%;
+          }
         }
       }
     }
