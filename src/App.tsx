@@ -1,6 +1,7 @@
+
+import AppRoutes from "./AppRoutes";
 import "./App.scss";
-//@ts-ignore
-import AppRoutes from "./routes";
+
 
 
 function App() {
