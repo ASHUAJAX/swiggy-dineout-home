@@ -5,7 +5,7 @@ import countapi from "countapi-js";
 
 function App() {
   const [count, setCount] = useState(0);
-  const mydomain = 'https://swiggy-dineout-home.vercel.app'
+  const mydomain = 'swiggy-dineout-home.vercel.app'
 
   useEffect(() => {
     countapi
