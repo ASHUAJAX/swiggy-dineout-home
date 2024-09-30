@@ -1,5 +1,5 @@
 import "./App.scss";
-import AppRoutes from "./routes/Index";
+import AppRoutes from "./routes";
 
 function App() {
   return (
