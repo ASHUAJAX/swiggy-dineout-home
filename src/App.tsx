@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
 import AppRoutes from "./routes/Index";
-import countapi from "countapi-js";
 
 function App() {
   const [count, setCount] = useState(0);
-  const mydomain = 'swiggy-dineout-home.vercel.app'
+  const myDomain = 'swiggy-dineout-home.vercel.app';
 
   useEffect(() => {
-    countapi
-      .hit(mydomain, "page-visits")
-      .then((result) => {
-        setCount(result.value);
+    // HitCounter API call
+    fetch(`https://api.hitcounter.me/hit/${myDomain}/page-visits`)
+      .then((response) => response.json())
+      .then((data) => {
+        setCount(data.hits); // Assuming the API returns hits in this format
+      })
+      .catch((error) => {
+        console.error("Error fetching visit count:", error);
       });
   }, []);
-  console.log("No. of visitors : ",count);
+
+  console.log("No. of visitors:", count);
+
   return (
     <>
       <AppRoutes />
